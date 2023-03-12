@@ -33,8 +33,8 @@ input[type='radio'] {
 }
 
 .wrapper__border {
-    width: 80rem;
-    margin: 0 auto;
+    max-width: 80rem;
+    margin:  auto;
     height: 100%;
     border: 0,3rem solid rgb(111, 111, 223);
     border-radius: 0.6rem;
@@ -45,8 +45,9 @@ input[type='radio'] {
 .wrapper {
     width: 70rem; 
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
     overflow: hidden;
+    
 }
 
 .images__according {
@@ -55,13 +56,14 @@ input[type='radio'] {
     height: 0;
     background-repeat: no-repeat;
     background-size: contain;
-    margin: 0.5rem 0 0.5rem 0;
-    transition: all 0.3s ease 0s;
+    margin: 0.7rem 0 0.5rem 0;
+    transition: all 0.8s ease 0s;
 }
 
 
 .description {
     font-size: 2rem;
+    cursor: pointer;
 }
 
 .description__item{
@@ -82,7 +84,7 @@ input[type='radio'] {
     border-top: 0.3rem solid #d2d9e2;
 }
 
-/* -----------------------------------Hover effect---------------------------------------------------- */
+/* -----------------------------------------------------------Hover effect------------------------------------------------------- */
 
 input[name='accord__mem']:hover~label h2 {
     color: black;
@@ -101,7 +103,7 @@ input[name='accord__mem']:hover~label  .description__item .open__arrow{
     display: block;
 }
 
-/* -----------------------------------Checked effect---------------------------------------------------- */
+/* -----------------------------------------------------------Checked effect--------------------------------------------------------- */
 
 input[name='accord__mem']:checked~label  h2 {
     color: black;
@@ -114,7 +116,7 @@ input[name='accord__mem']:checked~label .images__according {
 input[name='accord__mem']:checked~label  .description__item .open__arrow{
     transform: rotate(45deg);
 }
-/* -----------------------------------------------------------h1 ----------------------------------------------------------------------*/
+/* ------------------------------------------------------------------H1 ----------------------------------------------------------------*/
 .wrapper__accordion-content {
     border-bottom: 0.3rem solid #d2d9e2;
 }
@@ -138,4 +140,18 @@ input[name='accord__mem']:checked~label  .description__item .open__arrow{
 /* -----------------------------------------------------------Accordion mem №5 ----------------------------------------------------------*/
 .accordion__image5 {
     background-image: url('../cssBayan/images/4.png');
+}
+
+/* ------------------------------------------------------------------Media-------------------------------------------------------------- */
+
+@media screen and (max-width: 767px) {
+    h1 {
+        color:red
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1180px) {
+    h1 {
+        color: blue
+    }
 }
