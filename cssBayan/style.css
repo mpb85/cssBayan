@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Artegra';
+    src: url('../cssBayan/fonts/ArtegraSans-Black.ttf');
+    src: local('Artegra Sans Black'), local('Artegra-Sans-Black'),
+        url('ArtegraSans-Black.woff2') format('woff2'),
+        url('ArtegraSans-Black.woff') format('woff'),
+        url('ArtegraSans-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+
+h1 {
+    margin-block-end : 0;
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+    color: #146ebd
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+.accordion__body {
+    font-family: 'Artegra', sans-serif;
+    background-color: #f6f6ec;
+    overflow: hidden;
+    min-width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrapper__border {
+    max-width: 80rem;
+    margin:  auto;
+    height: 100%;
+    border: 0,3rem solid rgb(111, 111, 223);
+    border-radius: 0.6rem;
+    box-shadow: -0.2rem 0.1rem 1.2rem 1rem #9DC6EA;
+    overflow: auto;
+}
+
+.wrapper {
+    width: 70rem; 
+    margin: 0 auto;
+    padding: 1rem;
+    overflow: hidden;
+    
+}
+
+.images__according {
+    background-position: center;
+    max-width: 100%;
+    height: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0.7rem 0 0.5rem 0;
+    transition: all 0.8s ease 0s;
+}
+
+
+.description {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.description__item{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.open__arrow {
+    display: none;
+    background-image: url(../cssBayan/images/plus.svg);
+    background-repeat: no-repeat;
+    width: 1rem;
+    height: 1rem;
+}
+
+.accordion__top-line {
+    border-top: 0.3rem solid #d2d9e2;
+}
+
+/* -----------------------------------------------------------Hover effect------------------------------------------------------- */
+
+input[name='accord__mem']:hover~label h2 {
+    color: black;
+}
+
+input[name='accord__mem']:hover~label  .images__according{
+    height: 25rem;
+}
+
+input[name='accord__mem']:hover~label  .description__item .open__arrow{
+    display: block;
+    transform: rotate(45deg);
+}
+
+.wrapper__border:hover label .description__item .open__arrow {
+    display: block;
+}
+
+/* -----------------------------------------------------------Checked effect--------------------------------------------------------- */
+
+input[name='accord__mem']:checked~label  h2 {
+    color: black;
+}
+
+input[name='accord__mem']:checked~label .images__according {
+    height: 25rem;
+}
+
+input[name='accord__mem']:checked~label  .description__item .open__arrow{
+    transform: rotate(45deg);
+}
+/* ------------------------------------------------------------------H1 ----------------------------------------------------------------*/
+.wrapper__accordion-content {
+    border-bottom: 0.3rem solid #d2d9e2;
+}
+/* -----------------------------------------------------------Accordion mem №1 ----------------------------------------------------------*/
+
+.accordion__image1 {
+    background-image: url('../cssBayan/images/5.jpg');
+}
+/* -----------------------------------------------------------Accordion mem №2 ----------------------------------------------------------*/
+.accordion__image2 {
+    background-image: url('../cssBayan/images/3.jpg');
+}
+/* -----------------------------------------------------------Accordion mem №3 ----------------------------------------------------------*/
+.accordion__image3 {
+    background-image: url('../cssBayan/images/1.jpg');
+}
+/* -----------------------------------------------------------Accordion mem №4 ----------------------------------------------------------*/
+.accordion__image4 {
+    background-image: url('../cssBayan/images/2.jpg');
+}
+/* -----------------------------------------------------------Accordion mem №5 ----------------------------------------------------------*/
+.accordion__image5 {
+    background-image: url('../cssBayan/images/4.png');
+}
+
+/* ------------------------------------------------------------------Media-------------------------------------------------------------- */
+
+@media screen and (max-width: 767px) {
+    h1 {
+        color:red
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1180px) {
+    h1 {
+        color: blue
+    }
+}
