@@ -29,6 +29,7 @@ input[type='radio'] {
     overflow: hidden;
     min-width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .wrapper__border {
@@ -41,6 +42,12 @@ input[type='radio'] {
     overflow: auto;
 }
 
+.wrapper {
+    width: 70rem; 
+    margin: 0 auto;
+    padding: 2rem;
+    overflow: hidden;
+}
 
 .images__according {
     background-position: center;
@@ -49,48 +56,14 @@ input[type='radio'] {
     background-repeat: no-repeat;
     background-size: contain;
     margin: 0.5rem 0 0.5rem 0;
+    transition: all 0.3s ease 0s;
 }
 
-input[name='accord__mem']:checked~label  h2 {
-    color: black;
-}
-
-input[name='accord__mem']:hover~label h2 {
-    color: black;
-}
-
-input[name='accord__mem']:checked~label .images__according {
-    height: 25rem;
-}
-
-input[name='accord__mem']:hover~label  .images__according{
-    height: 25rem;
-}
-
-input[name='accord__mem']:hover~label  .description__item .open__arrow{
-    display: block;
-    transform: rotate(45deg);
-}
-
-.wrapper__border:hover label .description__item .open__arrow {
-    display: block;
-    
-}
-
-.wrapper {
-    width: 70rem; 
-    margin: 0 auto;
-    padding: 2rem;
-    overflow: hidden;
-}
 
 .description {
     font-size: 2rem;
 }
 
-.accordion__item {
-   
-}
 .description__item{
     align-items: center;
     display: flex;
@@ -104,102 +77,65 @@ input[name='accord__mem']:hover~label  .description__item .open__arrow{
     width: 1rem;
     height: 1rem;
 }
-.close__arrow {
-    display: none;
-    background-image: url(../cssBayan/images/x.svg);
-    background-repeat: no-repeat;
-    width: 1rem;
-    height: 1rem;
+
+.accordion__top-line {
+    border-top: 0.3rem solid #d2d9e2;
 }
 
+/* -----------------------------------Hover effect---------------------------------------------------- */
+
+input[name='accord__mem']:hover~label h2 {
+    color: black;
+}
+
+input[name='accord__mem']:hover~label  .images__according{
+    height: 25rem;
+}
+
+input[name='accord__mem']:hover~label  .description__item .open__arrow{
+    display: block;
+    transform: rotate(45deg);
+}
+
+.wrapper__border:hover label .description__item .open__arrow {
+    display: block;
+}
+
+/* -----------------------------------Checked effect---------------------------------------------------- */
+
+input[name='accord__mem']:checked~label  h2 {
+    color: black;
+}
+
+input[name='accord__mem']:checked~label .images__according {
+    height: 25rem;
+}
+
+input[name='accord__mem']:checked~label  .description__item .open__arrow{
+    transform: rotate(45deg);
+}
 /* -----------------------------------------------------------h1 ----------------------------------------------------------------------*/
 .wrapper__accordion-content {
-   
     border-bottom: 0.3rem solid #d2d9e2;
 }
-
 /* -----------------------------------------------------------Accordion mem №1 ----------------------------------------------------------*/
-.accordion__mem1 {
-    
-}
-
-
-.wrapper__accordion-mem1 {
-    
-}
-
-
-.description__item1 {
-}
 
 .accordion__image1 {
-   
     background-image: url('../cssBayan/images/5.jpg');
-    
-   
 }
-
-
-.accordion__mem1:hover .accordion__image1 {
-       
-}
-
 /* -----------------------------------------------------------Accordion mem №2 ----------------------------------------------------------*/
-.accordion__mem2 {
-    
-    
-}
-.wrapper__accordion-mem2 {
-  
-    border-top: 0.3rem solid #d2d9e2;
-}
-.description__item2 {
-}
 .accordion__image2 {
-   
     background-image: url('../cssBayan/images/3.jpg');
-
 }
-
 /* -----------------------------------------------------------Accordion mem №3 ----------------------------------------------------------*/
-.accordion__mem3 {
-}
-.wrapper__accordion-mem3 {
-   
-    border-top: 0.3rem solid #d2d9e2;
-}
-.description__item3 {
-}
 .accordion__image3 {
-    
     background-image: url('../cssBayan/images/1.jpg');
 }
-
 /* -----------------------------------------------------------Accordion mem №4 ----------------------------------------------------------*/
-.accordion__mem4 {
-}
-.wrapper__accordion-mem4 {
-    
-    border-top: 0.3rem solid #d2d9e2;
-}
-.description__item4 {
-}
 .accordion__image4 {
-    
     background-image: url('../cssBayan/images/2.jpg');
 }
-
 /* -----------------------------------------------------------Accordion mem №5 ----------------------------------------------------------*/
-.accordion__mem5 {
-}
-.wrapper__accordion-mem5 {
-    border-top: 0.3rem solid #d2d9e2;
-}
-.description__item5 {
-}
 .accordion__image5 {
-    
     background-image: url('../cssBayan/images/4.png');
-}
-.footer {
 }
